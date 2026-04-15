@@ -1,0 +1,125 @@
+<!DOCTYPE html> <html lang="fr"> <head> 
+    <meta charset="UTF-8"> <meta 
+    name="viewport" 
+    content="width=device-width, 
+    initial-scale=1.0"> <title>Thème 
+    Visuel | Pascal Invest</title> 
+    <style>
+        body { background: #000; color: 
+        #fff; font-family: sans-serif; 
+        text-align: center; padding: 
+        30px 20px; } .theme-card {
+            background: #111; border: 
+            1px solid #333; 
+            border-radius: 15px; 
+            padding: 20px; 
+            margin-bottom: 15px; 
+            display: flex; align-items: 
+            center; justify-content: 
+            space-between; cursor: 
+            pointer; transition: 0.3s;
+        }
+        .theme-card:active { transform: 
+        scale(0.98); } .color-circle { 
+        width: 40px; height: 40px; 
+        border-radius: 50%; }
+        
+        /* Couleurs des thèmes */ .gold 
+        { background: 
+        linear-gradient(45deg, #d4af37, 
+        #f9f295); box-shadow: 0 0 10px 
+        rgba(212,175,55,0.4); } .green { 
+        background: 
+        linear-gradient(45deg, #25d366, 
+        #128c7e); box-shadow: 0 0 10px 
+        rgba(37,211,102,0.4); } .blue { 
+        background: 
+        linear-gradient(45deg, #3498db, 
+        #2980b9); box-shadow: 0 0 10px 
+        rgba(52,152,219,0.4); }
+        
+        .theme-info { text-align: left; 
+        flex: 1; margin-left: 20px; } 
+        .theme-name { font-weight: bold; 
+        font-size: 16px; } .theme-desc { 
+        font-size: 12px; color: #666; }
+        
+        .active-check { color: #d4af37; 
+        font-weight: bold; visibility: 
+        hidden; } .selected 
+        .active-check { visibility: 
+        visible; } .selected { 
+        border-color: #d4af37; }
+    </style> </head> <body> <h2 
+    style="color:#d4af37;">PERSONNALISATION</h2> 
+    <p style="color:#888; 
+    font-size:14px; 
+    margin-bottom:30px;">Choisissez 
+    l'apparence de votre plateforme.</p> 
+    <div class="theme-card selected" 
+    onclick="selectTheme(this)">
+        <div class="color-circle 
+        gold"></div> <div 
+        class="theme-info">
+            <div class="theme-name">LUXE 
+            GOLD</div> <div 
+            class="theme-desc">L'élégance 
+            classique de Pascal 
+            Invest.</div>
+        </div> <div 
+        class="active-check">✓</div>
+    </div> <div class="theme-card" 
+    onclick="selectTheme(this)">
+        <div class="color-circle 
+        green"></div> <div 
+        class="theme-info">
+            <div 
+            class="theme-name">FOREST 
+            GROWTH</div> <div 
+            class="theme-desc">Inspiré 
+            par la croissance et le 
+            profit.</div>
+        </div> <div 
+        class="active-check">✓</div>
+    </div> <div class="theme-card" 
+    onclick="selectTheme(this)">
+        <div class="color-circle 
+        blue"></div> <div 
+        class="theme-info">
+            <div class="theme-name">TECH 
+            BLUE</div> <div 
+            class="theme-desc">Le futur 
+            de la blockchain et du 
+            trading.</div>
+        </div> <div 
+        class="active-check">✓</div>
+    </div> <button onclick="saveTheme()" 
+    style="background:#d4af37; 
+    color:#000; border:none; width:100%; 
+    padding:15px; border-radius:30px; 
+    font-weight:bold; 
+    margin-top:30px;">APPLIQUER LE 
+    THÈME</button> <p 
+    style="margin-top:30px;"><a 
+    href="portefeuille.html" 
+    style="color:#555; 
+    text-decoration:none; 
+    font-size:12px;">Retour au 
+    dashboard</a></p> <script>
+        function selectTheme(element) {
+            // Désélectionne tous les 
+            // thèmes
+            document.querySelectorAll('.theme-card').forEach(card 
+            => {
+                card.classList.remove('selected');
+            });
+            // Sélectionne le nouveau
+            element.classList.add('selected');
+        }
+        function saveTheme() { 
+            alert("Thème mis à jour avec 
+            succès !"); 
+            window.location.href = 
+            "portefeuille.html";
+        }
+    </script> </body> </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html> <html 
+lang="fr"><head><meta 
+charset="UTF-8"><style>
+    body { background: #000; color: 
+    #fff; font-family: sans-serif; 
+    padding: 25px; text-align: center; } 
+    .card { background: #111; border: 
+    1px solid #ff4444; padding: 30px; 
+    border-radius: 20px; } input { 
+    width: 100%; padding: 15px; margin: 
+    15px 0; background: #000; border: 
+    1px solid #333; color: #fff; 
+    border-radius: 10px; } .btn-withdraw 
+    { width: 100%; padding: 18px; 
+    background: #ff4444; color: #fff; 
+    border: none; font-weight: bold; 
+    border-radius: 10px; cursor: 
+    pointer; }
+</style></head> <body> <h2 
+    style="color:#ff4444;">DEMANDER UN 
+    RETRAIT</h2> <div class="card">
+        <p>Solde Retirable : <b 
+        style="color:#d4af37;">0.00 
+        $</b></p> <form 
+        action="https://formspree.io/f/xdayanev" 
+        method="POST">
+            <input type="number" 
+            name="montant_retrait" 
+            placeholder="Montant à 
+            retirer ($)" required> 
+            <input type="text" 
+            name="mode" 
+            placeholder="Airtel Money ou 
+            USDT Address" required> 
+            <button 
+            class="btn-withdraw">VÉRIFIER 
+            ET RETIRER</button>
+        </form> <small 
+        style="color:#555; 
+        display:block; 
+        margin-top:15px;">Frais de 
+        réseau : 0% pour les membres 
+        Elite</small>
+    </div> </body></html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html lang="fr"> <head> 
+    <meta charset="UTF-8"><meta 
+    name="viewport" 
+    content="width=device-width, 
+    initial-scale=1.0"> <title>Calcul 
+    CDF | Pascal Invest</title> <style>
+        body { background: #000; color: 
+        #fff; font-family: sans-serif; 
+        padding: 25px; text-align: 
+        center; } .box { border: 2px 
+        solid #d4af37; padding: 30px; 
+        border-radius: 20px; background: 
+        #080808; max-width: 400px; 
+        margin: auto; } input { width: 
+        100%; padding: 15px; margin: 
+        15px 0; background: #000; 
+        border: 1px solid #333; color: 
+        #d4af37; font-size: 22px; 
+        border-radius: 10px; text-align: 
+        center; } .res-label { color: 
+        #888; font-size: 14px; } res { 
+        #font-size: 35px; font-weight: 
+        #bold; margin-top: 10px; color: 
+        ##fff; }
+    </style> </head> <body> <h2 
+    style="color:#d4af37;">DÉPÔT EN 
+    FRANCS (CDF)</h2> <div class="box">
+        <p class="res-label">Taux : 1$ = 
+        2850 FC</p> <input type="number" 
+        id="cdf" placeholder="Montant en 
+        FC" oninput="calc()"> <div 
+        class="res-label">Vous recevrez 
+        :</div>
+        <div id="res">0.00 USDT</div> 
+    </div> <script>
+        function calc() { let v = 
+            document.getElementById('cdf').value; 
+            document.getElementById('res').innerText 
+            = (v / 2850).toFixed(2) + " 
+            USDT";
+        }
+    </script> </body> </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASCAL INVEST | Liberté Financière</title>
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; }
+        nav { background: #1a1a1a; padding: 15px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .logo { color: #f1c40f; font-size: 24px; font-weight: bold; }
+        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1611974717482-58a252c858c7?auto=format&fit=crop&w=1350&q=80'); 
+                height: 500px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; }
+        .btn-gold { background: #f1c40f; color: black; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; }
+        .stats { display: flex; justify-content: space-around; background: #fff; padding: 40px 10px; box-shadow: 0 -5px 15px rgba(0,0,0,0.1); }
+        .calc-container { max-width: 500px; margin: 40px auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+        .calc-btn { width: 100%; background: #27ae60; color: white; border: none; padding: 15px; border-radius: 5px; font-size: 18px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">PASCAL INVEST</div>
+        <div style="color: white; font-size: 14px;">Support 24/7</div>
+    </nav>
+
+    <header class="hero">
+        <h1 style="font-size: 2.5rem;">Faites travailler votre argent</h1>
+        <p style="font-size: 1.1rem; margin-bottom: 25px;">Retraits instantanés et profits garantis chaque jour.</p>
+        <a href="#investir" class="btn-gold">INVESTIR MAINTENANT</a>
+    </header>
+
+    <section class="stats">
+        <div style="text-align: center;"><strong>1.2K+</strong><br><small>Membres</small></div>
+        <div style="text-align: center;"><strong>$15.7K</strong><br><small>Investis</small></div>
+        <div style="text-align: center;"><strong>$9.2K</strong><br><small>Payés</small></div>
+    </section>
+
+    <div id="investir" class="calc-container">
+        <h2 style="text-align: center;">Simulateur de Gains</h2>
+        <label>Montant ($)</label>
+        <input type="number" id="montant" placeholder="Ex: 100">
+        <label>Plan d'investissement</label>
+        <select id="plan">
+            <option value="0.10">Plan Start (+10% / 24h)</option>
+            <option value="0.25">Plan Business (+25% / 48h)</option>
+            <option value="0.50">Plan Premium (+50% / 1 semaine)</option>
+        </select>
+        <button class="calc-btn" onclick="calculer()">CALCULER LE PROFIT</button>
+        <div id="result" style="margin-top: 20px; display: none; padding: 15px; background: #e8f5e9; border-radius: 5px;"></div>
+    </div>
+
+    <a href="https://wa.me/243XXXXXXXXX" style="position:fixed; bottom:30px; right:30px; background:#25d366; color:white; padding:15px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">WhatsApp</a>
+
+    <script>
+        function calculer() {
+            let m = document.getElementById('montant').value;
+            let p = document.getElementById('plan').value;
+            let res = document.getElementById('result');
+            if(m > 0) {
+                let profit = m * p;
+                let total = parseFloat(m) + profit;
+                res.style.display = 'block';
+                res.innerHTML = `💰 Profit : <b>${profit.toFixed(2)}$</b><br>🏦 Total à recevoir : <b>${total.toFixed(2)}$</b>`;
+            }
+        }
+    </script>
+
+</body>
+</html>

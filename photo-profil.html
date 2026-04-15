@@ -1,0 +1,59 @@
+<!DOCTYPE html> <html lang="fr"> <head> 
+    <meta charset="UTF-8"> <meta 
+    name="viewport" 
+    content="width=device-width, 
+    initial-scale=1.0"> <title>Photo de 
+    Profil | Pascal Invest</title> 
+    <style>
+        body { background: #000; color: 
+        #fff; font-family: sans-serif; 
+        text-align: center; padding: 
+        40px 20px; } .upload-circle { 
+        width: 180px; height: 180px; 
+        border-radius: 50%; border: 3px 
+        solid #d4af37; margin: 30px 
+        auto; overflow: hidden; 
+        background: #111; position: 
+        relative; }
+        #preview { width: 100%; height: 
+        #100%; object-fit: cover; }
+        .btn-select { background: 
+        #d4af37; color: #000; padding: 
+        15px 30px; border-radius: 30px; 
+        font-weight: bold; cursor: 
+        pointer; display: inline-block; 
+        margin-top: 20px; } 
+        input[type="file"] { display: 
+        none; } .save-link { display: 
+        block; margin-top: 40px; color: 
+        #555; text-decoration: none; 
+        font-size: 14px; } </style> 
+</head> <body>
+    <h2 style="color:#d4af37;">PHOTO DE 
+    PROFIL</h2> <p style="color:#888; 
+    font-size:14px;">Choisissez une 
+    image carrée pour un meilleur 
+    rendu.</p> <div 
+    class="upload-circle">
+        <img id="preview" 
+        src="https://via.placeholder.com/180/000000/d4af37?text=+" 
+        alt="Aperçu">
+    </div> <label for="file-upload" 
+    class="btn-select">CHOISIR UNE 
+    PHOTO</label> <input type="file" 
+    id="file-upload" accept="image/*" 
+    onchange="showPreview(event)"> <a 
+    href="portefeuille.html" 
+    class="save-link">TERMINER ET 
+    ENREGISTRER</a> <script>
+        function showPreview(event) { 
+            if(event.target.files.length 
+            > 0) {
+                let src = 
+                URL.createObjectURL(event.target.files[0]); 
+                let preview = 
+                document.getElementById("preview"); 
+                preview.src = src;
+            }
+        }
+    </script> </body> </html>
